@@ -1,9 +1,10 @@
 {
-  "name": "groundwork-server",
+  "name": "netkuma",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "start": "node site.js",
+    "dev": "nodemon example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

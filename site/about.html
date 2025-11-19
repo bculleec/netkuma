@@ -8,17 +8,35 @@
         body {
             background-color: #111;
             font-family: monospace;
+            font-size: 1.2rem;
         }
-        .description {
+        .main {
             margin: auto;
-            color: #aa60d4;
+            color: #c76ffa;
             max-width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+        }
+        a {
+            color: #c76ffa;
         }
     </style>
 </head>
 <body>
-    <div class="description">
-        This is a simple, minimal, low-overhead web framework for Node.js
+
+    <div class="main">
+        <h2 class="title">netkuma.js</h2>
+        <div class="descript">
+            I was playing around with the Node.js net API and randomly started to try reverse-engineering Fastify from memory.<br>
+            Thus, netkuma was born. netkuma is a low-level mini networking framework for Node.js built on top of raw TCP.<br>
+            Fun fact: this site is being served by netkuma!<br>
+            <a href="https://github.com/bculleec/netkuma">github</a>
+            <a href="/docs">docs</a>
+        </div>
+        
     </div>
 </body>
 </html>
