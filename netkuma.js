@@ -62,11 +62,11 @@ const netkuma = function(opts) {
 }
 
 function publicFileExists(publicDir, fileName) {
-    return fs.existsSync(path.join('./site', fileName));
+    return fs.existsSync(path.join(publicDir, fileName));
 }
 
 function publicFileRead(publicDir, fileName) {
-    return fs.readFileSync(path.join('./site', fileName));
+    return fs.readFileSync(path.join(publicDir, fileName));
 }
 
 function parseHttp(httpString) {
