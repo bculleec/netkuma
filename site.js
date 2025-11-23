@@ -16,8 +16,12 @@ app.get('/about', (request, reply) => {
 });
 
 app.get('/docs', (request, reply) => {
-    return reply.send("This page is still under construction! netkuma will work hard to get it ready soon.");
-})
+    return reply.view('docs.html');
+});
+
+app.get('/quickstart', (request, reply) => {
+    return reply.view('docs/quickstart.html');
+});
 
 app.listen({ port: 8000, host: '0.0.0.0' }, (err, address) => {
     if (err) throw err;

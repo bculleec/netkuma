@@ -52,6 +52,8 @@ const netkuma = function(opts) {
                 if (publicFileExists(app.publicDir, fname)) {
                     const httpBody = publicFileRead(app.publicDir, fname);
                     reply.send(httpBody);
+                } else {
+                    reply.send('File' + app.publicDir + fname + 'was not found...')
                 }
             }
         }
