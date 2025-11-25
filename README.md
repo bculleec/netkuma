@@ -1,6 +1,6 @@
 netkuma.js is a low-level mini networking framework for your Node.js web applications. It uses the net library hence 'net' and is small and hardworking hence 'kuma' meaning bear.
 
- - [Website](https://netkuma.up.railway.app/) - [Docs](https://netkuma.up.railway.app/docs)
+ - [Website](https://netkuma.ca/) - [Docs](https://netkuma.up.railway.app/docs)
 
 ## Features
 netkuma.js is still early and in-development but supports practical building blocks for web frameworking. You can:
