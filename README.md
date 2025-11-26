@@ -10,6 +10,7 @@ netkuma.js is still early and in-development but supports practical building blo
  - send raw text responses
  - render simple HTML views by passing a file path
  - define routes with URL parameters `/user/:id` and access them via `request.params`
+ - register `POST` routes and read request body
 
 This project will continue to grow and more functionality will be added as it evolves.
 

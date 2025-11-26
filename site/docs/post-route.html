@@ -43,27 +43,48 @@
     <div class="main">
         <h2 class="title">netkuma.js</h2>
         <div class="descript">
-            Route Parameters
+            Post Route
             <div class="code-block">
 /*
-Tiny example showing how you can use route parameters.
+Tiny example to show you how you can set up a POST route.
 */
 
-import { netkuma } from "../netkuma.js"; 
+import { netkuma } from "../netkuma.js";
 
-const app = netkuma( {logger : true } );
+const app = netkuma({ logger: true });
 
-app.get('/item/:id', (request, reply) => {
-    return reply.send('Item infomation: Item Identification number - ' + request.params.id);
+app.post('/', (request, reply) => {
+    const q = request.body.q;
+
+    return reply.send('Creating your post: ' + q);
 });
 
-app.get('/:id/send', (request, reply) => {
-    return reply.send(request.params.id + ' has been sent!');
+app.get('/', (request, reply) => {
+    return reply.send(`
+        &ltform method='post'>
+        &ltinput type=text name='q' id='q'>
+        &ltinput type=submit>
+        &lt/form>
+        &ltdiv id='response'>
+        &ltscript>
+        document.querySelector('form').addEventListener('submit', async (e) => {
+            e.preventDefault();    
+            console.log('form submitted');
+            const response = await fetch('/', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ q: document.getElementById('q').value })
+            });
+            document.getElementById('response').innerText = await response.text();
+        })
+        &lt/script>
+        `);
 });
 
-app.listen({ port: 4040, host: '0.0.0.0' }, (err, address) => {
+app.listen({port : 8080, host: '0.0.0.0'}, (err, address) => {
     if (err) throw err;
 });
+
 
             </div>
 

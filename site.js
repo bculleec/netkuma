@@ -27,6 +27,11 @@ app.get('/route-params', (request, reply) => {
     return reply.view('docs/route-params.html');
 });
 
+app.get('/post-route', (request, reply) => {
+    return reply.view('docs/post-route.html');
+});
+
+
 app.listen({ port: 8000, host: '0.0.0.0' }, (err, address) => {
     if (err) throw err;
 });
