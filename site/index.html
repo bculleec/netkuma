@@ -1,42 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>netkuma | about</title>
-    <style>
-        body {
-            background-color: #111;
-            font-family: monospace;
-            font-size: 1.2rem;
-        }
-        .main {
-            margin: auto;
-            color: #c76ffa;
-            max-width: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 400px;
-        }
-        a {
-            color: #c76ffa;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>netkuma.js</title>
+<style>
+  body {
+    margin: 70px 0;
+    font-family: sans-serif;
+    background: #110f17;
+    color: #d8c8ff;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+  }
+  .wrapper {
+    max-width: 600px;
+    width: 600px;
+    padding: 20px;
+  }
+  .screenshot {
+    width: 100%;
+    height: 300px;
+    background: #1b1823;
+    border: 1px solid #2b2640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #8f7dda;
+  }
+  a.button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #2b2640;
+    color: #d8c8ff;
+    text-decoration: none;
+    margin: 12px 0;
+  }
+  a.button:hover {
+    background: #3e385c;
+  }
+  .section {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    min-width: 70%;
+  }
+  a {
+    color: #c4afff;
+  }
+</style>
 </head>
-<body>
 
-    <div class="main">
-        <h2 class="title">netkuma.js</h2>
-        <div class="descript">
-            I was playing around with the Node.js net API and randomly started to try reverse-engineering Fastify from memory.<br>
-            Thus, netkuma was born. netkuma is a low-level mini networking framework for Node.js built on top of raw TCP.<br>
-            Fun fact: this site is being served by netkuma!<br>
-            <a href="https://github.com/bculleec/netkuma">github</a>
-            <a href="/docs">docs</a>
-        </div>
-        
-    </div>
+<body>
+<div class="wrapper">
+
+
+  <h2 style="color: white">netkuma.js</h2>
+
+  <div class="section">
+    A lightweight, low-level Node.js networking framework built on top of raw TCP, inspired by
+    real server internals, and API (mainly Fastify) and designed as a learning project to understand request handling,
+    routing, protocol parsing, and deployment from scratch.
+    <br><br>
+    `net` in netkuma is a small nudge to the `net` module in Node.js. I was experimenting with that when the idea came to me.
+  </div>
+
+  <a href="https://github.com/bculleec/netkuma" class="button" style="color:white;">View on GitHub</a>
+  <a href="/docs" class="button" style="color:white;">Docs</a>
+
+  <div class="section">
+    netkuma.js currently powers its own production deployment, (including this site!), demonstrating a
+    fully custom stack from TCP socket to browser.
+  </div>
+
+  <div class="section">
+    Tools used: Node.js net sockets, Linux, systemd services, Nginx reverse-proxy,
+    Certbot for TLS, and a self-managed VPS.
+  </div>
+
+</div>
 </body>
 </html>

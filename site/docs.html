@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>netkuma | docs</title>
-    <style>
-        body {
-            background-color: #111;
-            font-family: monospace;
-            font-size: 1.2rem;
-        }
-        .main {
-            margin: auto;
-            color: #c76ffa;
-            max-width: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 400px;
-        }
-        a {
-            color: #c76ffa;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>netkuma.js</title>
+<style>
+  body {
+    margin: 70px 0;
+    font-family: sans-serif;
+    background: #110f17;
+    color: #d8c8ff;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+  }
+  .wrapper {
+    max-width: 600px;
+    width: 600px;
+    padding: 20px;
+  }
+  .screenshot {
+    width: 100%;
+    height: 300px;
+    background: #1b1823;
+    border: 1px solid #2b2640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #8f7dda;
+  }
+  a.button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #2b2640;
+    color: #d8c8ff;
+    text-decoration: none;
+    margin: 12px 0;
+  }
+  a.button:hover {
+    background: #3e385c;
+  }
+  .section {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    min-width: 70%;
+  }
+  a {
+    color: #c4afff;
+  }
+</style>
 </head>
-<body>
 
-    <div class="main">
-        <h2 class="title">netkuma.js</h2>
-        <div class="descript">
-            <ul>
-                <li><a href="/quickstart">Quickstart</a></li>
-                <li><a href="/route-params">Route Parameters</a></li>
-                <li><a href="/post-route">Post Route</a></li>
-            </ul>
-            <a href="/">home</a>
-            <a href="https://github.com/bculleec/netkuma">github</a>
-        </div>
-        
-    </div>
+<body>
+<div class="wrapper">
+
+
+  <h2 style="color: white">netkuma.js</h2>
+
+  <div class="section">
+    <ul>
+        <li><a href="/quickstart">Quickstart</a></li>
+        <li><a href="/route-params">Route Parameters</a></li>
+        <li><a href="/post-route">Post Route</a></li>
+    </ul>
+  </div>
+
+  <a href="https://github.com/bculleec/netkuma" class="button" style="color:white;">View on GitHub</a>
+  <a href="/" class="button" style="color:white;">Home</a>
+
+</div>
 </body>
 </html>
